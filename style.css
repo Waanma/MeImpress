@@ -1,0 +1,76 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 10x;
+  }
+      
+  main{
+    width: 100%;
+    height: 100%;
+    background-image: url('sources/img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
+    background-size:cover;
+    background-position:center;
+    font-family: 'Audiowide', cursive;
+  }
+
+  .titulo{
+    font-family: 'Bungee Shade', cursive;
+  }
+.header_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_main h2{
+    font-family: 'Black Ops One', cursive; 
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    padding-top: 150px;
+}
+.main_main{
+    justify-content: center;   
+}
+.buscador{
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subtitulo h1{
+    font-family: 'Audiowide', cursive;
+    color: white;
+    padding-top: 50px;
+}
+.productos{
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-bottom: 7%;
+}
+.contenedor{
+    background-color: rgba(255, 255, 255, 0.734); 
+    border-radius: 25px;
+      
+}
+.contenido{
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 22rem; 
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    padding-top: 90px;
+    padding-left: 7%;
+    padding-right: 5%;
+}
+.acordion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
