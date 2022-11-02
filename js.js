@@ -1,83 +1,189 @@
-const productos = [
-    {nombre: "pikachu", precio: 1599},
-    { nombre: "dragonite", precio: 2599},
-    {nombre: "Charizard", precio: 3599},
-    {nombre: "Umbreon", precio: 599},
-    {nombre: "Evee", precio: 1599},
-    {nombre: "Mewtwo", precio: 2599},
-    {nombre: "Charmander", precio: 1999},
-    {nombre: "squirtle", precio: 4599}
-];
+
+
+const stockDeProductos = [
+    {
+        id: 1,
+        nombre: "Pikachu",
+        cantidad: 1,
+        precio: 1599,
+        img: "sources/img/Pikachu.jpg",
+    },
+    {
+        id: 2,
+        nombre: "Charmander",
+        cantidad: 1,
+        precio: 5599,
+        img: "sources/img/Charmander.jpg",
+    },
+    {
+        id: 3,
+        nombre: "Mew",
+        cantidad: 1,
+        precio: 2399,
+        img: "sources/img/Mew.jpg",
+    },
+    {
+        id: 4,
+        nombre: "Charizard",
+        cantidad: 1,
+        precio: 4999,
+        img: "sources/img/Charizard.jpg",
+    },
+    {
+        id: 5,
+        nombre: "Dragonite",
+        cantidad: 1,
+        precio: 3299,
+        img: "sources/img/Dragonite.jpg",
+    },
+    {
+        id: 6,
+        nombre: "Evee",
+        cantidad: 1,
+        precio: 899,
+        img: "sources/img/Evee.jpg",
+    },
+    {
+        id: 7,
+        nombre: "Bulbasaur",
+        cantidad: 1,        
+        precio: 2599,
+        img: "sources/img/Bulbasaur.jpg",
+    },
+    {
+        id: 8,
+        nombre: "Squirtle",
+        cantidad: 1,
+        precio: 1099,
+        img: "sources/img/Squirtle.jpg",
+    },
+    {
+        id: 9,
+        nombre: "Mudkip",
+        cantidad: 1,        
+        precio: 4500,
+        img: "sources/img/mudkip.jpg",
+    },
+    {
+        id: 10,
+        nombre: "Teddiursa",
+        cantidad: 1,        
+        precio: 899,
+        img: "sources/img/teddiursa.jpg",
+    },
+    {
+        id: 11,
+        nombre: "Psyduck",
+        cantidad: 1,        
+        precio: 2599,
+        img: "sources/img/psyduck.jpg",
+    },
+    {
+        id: 12,
+        nombre: "Umbreon",
+        cantidad: 1,        
+        precio: 2599,
+        img: "sources/img/umbreon.jpg",
+    },
+    {
+        id: 13,
+        nombre: "Vulpix",
+        cantidad: 1,        
+        precio: 1699,
+        img: "sources/img/vulpix.jpg",
+    },
+    {
+        id: 14,
+        nombre: "Pikakashi",
+        cantidad: 1,        
+        precio: 7999,
+        img: "sources/img/pikakashi.jpg",
+    }
+]
+
 let carrito = [];
 
-let seleccion = prompt("Hola, desea comprar algún Pokemón? Si o no:");
+const contenedor = document.querySelector("#contenedor");
+const carritoContenedor = document.querySelector('#CarritoContenedor');
+const vaciarCarrito = document.querySelector('#vaciarCarrito');
+const precioTotal = document.getElementsByClassName('precioTotal');
 
-while(seleccion != "Si" && seleccion != "si" && seleccion != "No" && seleccion != "no"){
-    seleccion = prompt("Hola, desea comprar algún Pokemón? Si o no:");
+document.addEventListener('DOMContentLoaded', () => {
+    carrito = JSON.parse(localStorage.getItem('carrito')) || []
+    mostrarCarrito()
+})
+
+
+stockDeProductos.forEach((prod) =>{
+    const {id, nombre, precio, img, cantidad} = prod;
+    if (contenedor) {
+        contenedor.innerHTML += `
+        <div class="card mt-3" style="width: 18rem;">
+        <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">${nombre}</h5>
+        <p class="card-text">Precio: ${precio}</p>
+        <p class="card-text">Cantidad: ${cantidad}</p>
+        <button class="btn btn-primary" onclick="agregarProducto(${id})">Comprar Producto</button>
+        </div>
+        </div>
+        `;
+    }
+});
+
+
+
+function agregarProducto(id){
+    const item = stockDeProductos.find((prod) => prod.id === id)
+    carrito.push(item)
+    mostrarCarrito()
+    console.log(carrito)
 }
 
-if (seleccion == "si"){
-    alert("A continuacion nuestra lista de Pokemones:");
-    let todoslosProductos = productos.map(
-        (producto) => producto.nombre + " " + producto.precio + "$");
-    alert(todoslosProductos.join(" - "))
-}else if (seleccion == "no"){
-    alert("Gracias por la visita, vuelva pronto!")
+function eliminarProducto(id){
+    const pokemonId = id
+    carrito = carrito.filter((pokemon) => pokemon.id !== pokemonId)
+    mostrarCarrito()
 }
 
-while(seleccion != "no"){
-    let producto = prompt("Ingresá el nombre del pokemon!")
-    let precio = 0
+function guardarStorage(){
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
 
-    if(producto == "pikachu" || producto == "dragonite" || producto == "charizard" || producto == "umbreon" || producto == "evee" || producto == "mewtwo" || producto == "charmander" || producto == "squirtle") {
-        switch(producto){
-            case "pikachu":
-            precio = 1599
-            break;
-            case "dragonite":
-            precio = 2599
-            break;
-            case "charizard":
-            precio = 3599
-            break;
-            case "umbreon":
-            precio = 599
-            break;
-            case "evee":
-            precio = 1599
-            break;
-            case "mewtwo":
-            precio = 2599
-            break;
-            case "charmander":
-            precio = 1999
-            break;
-            case "squirtle":
-            precio = 4599
-            break;
-        default:
-            break;
-        }
-        let unidades = parseInt(prompt("Ingrese la cantidad de unidades:"));
+vaciarCarrito.addEventListener('click', () => {
+    carrito.length = []
+    mostrarCarrito()
+})
 
-        carrito.push({producto, unidades, precio})
-    }else{
-        alert("No tenemos ese pokemon")
-        producto = prompt("Ingresá el nombre del pokemon!")
+const mostrarCarrito = () => {
+    const modalBody = document.querySelector('.modal .modal-body');
+
+    modalBody.innerHTML = ''
+    carrito.forEach((prod) => {
+        const {id, nombre, img, cantidad, precio} = prod
+        modalBody.innerHTML += `
+        <div class="modal-contenedor">
+        <div>
+        <img class"img-fuid" id="img-carrito" src="${img}"/>
+        </div>
+
+        <div>
+        <p>Producto: ${nombre}</p>
+        <p>Precio: ${precio}</p>
+        <p>Cantidad: ${cantidad}</p>
+
+        <button onclick="eliminarProducto(${id})" class"btn btn-danger">Eliminar del carrito</button>
+        </div>
+        `
+    })
+
+    if(carrito.length === 0){
+        modalBody.innerHTML = `
+        <p class="text-center text-primary parrafo">No hay nada agregado!</p>
+        `
     }
 
-    seleccion = prompt("Desea ingresar otro Pokemón? Si o No:")
-
-    while(seleccion == "no"){
-        alert("Gracias por su compra!")
-        carrito.forEach((carritoFinal) => {
-            alert(`producto: ${carritoFinal.producto}, cantidad: ${carritoFinal.unidades}, total a pagar por ${carritoFinal.unidades}: ${carritoFinal.unidades * carritoFinal.precio}`)
-        })
-        break; 
-    }
-
+    guardarStorage()
 }
 
-const precioFinal = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
 
-alert("El total a pagar es: " + "$" + precioFinal);

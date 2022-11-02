@@ -11,38 +11,44 @@
   main{
     width: 100%;
     height: 100%;
-    background-image: url('sources/img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
-    background-size:cover;
-    background-position:center;
     font-family: 'Audiowide', cursive;
+    padding-left: 13%;
+    padding-right: 13%;
+    background: transparent;
   }
 
-  .titulo{
+body{
+    background-image: url('sources/img/pokebola2.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.titulo{
     font-family: 'Bungee Shade', cursive;
-  }
+}
 .header_main{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .header_main h2{
     font-family: 'Black Ops One', cursive; 
     font-size: 60px;
     color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 1px black;
     padding-top: 150px;
+    justify-content: center;
+    padding-left: 5%;  
 }
-.main_main{
-    justify-content: center;   
-}
+
 .buscador{
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-top: 20%;
 }
 .subtitulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 8%;
+    padding-left: 25px;
+    padding-bottom: 3%;
 }
 .subtitulo h1{
     font-family: 'Audiowide', cursive;
@@ -50,22 +56,10 @@
     padding-top: 50px;
 }
 .productos{
-    padding-left: 17%;
-    padding-right: 17%;
     padding-bottom: 7%;
-}
-.contenedor{
-    background-color: rgba(255, 255, 255, 0.734); 
+    background-color: #00000043; 
     border-radius: 25px;
-      
-}
-.contenido{
-    display: grid;
-    gap: 2rem;
-    grid-auto-flow: dense;
-    grid-auto-rows: 22rem; 
-    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
-    padding-top: 90px;
+    padding-top: 20px;
     padding-left: 7%;
     padding-right: 5%;
 }
@@ -74,3 +68,17 @@
     justify-content: center;
     align-items: center;
 }
+.modal-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#img-carrito{
+    width: 200px;
+    padding: 20px;
+}
+.parrafo{
+    font-weight: 600;
+    font-style: italic;
+}
+

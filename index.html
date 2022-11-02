@@ -18,12 +18,22 @@
 <body>
     
     <nav class="navbar navbar-dark fixed-top"
-    style="background-color: rgba(0, 0, 0, 0.752);">
+    style="background-color: #000000ca;">
         <div class="container d-flex justify-content-between">
-          <a class="navbar-brand titulo" href="#" style="font-size: 40px;">Me Impress</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <a class="navbar-brand titulo" href="#" style="font-size: 40px;">Me Impress</a>
+          <a
+              class="nav-link text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+            >
+              <i class="bi bi-cart mx-5" id="carritoContenedor">
+                <img src="/sources/img/pokedex.png"
+                style="width: 50px;" alt="">
+              </i>
+            </a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -41,112 +51,70 @@
             </ul>
           </div>
         </div>
-      </nav>
+    </nav>
 
       
       
-<main class="main_main">
+
   <header class="header_main">
-    <h2>Impresiones 3d</h2> 
-       
+  <div>
+    <h2>Pokemons 3d</h2> 
+    <div class="input-group mb-3 buscador">
+      <input type="text" class="form-control" placeholder="Buscador" aria-label="Buscador" aria-describedby="button-addon2">
+      <button class="btn btn-outline-light" type="button" id="button-addon2">Buscar</button>
+    </div>
+    <div class="subtitulo">
+    <h1>Nuestros productos:</h1>
+    </div>
+  </div>
   </header>
-  <div class="input-group mb-3 buscador">
-    <input type="text" class="form-control" placeholder="Buscador" aria-label="Buscador" aria-describedby="button-addon2">
-    <button class="btn btn-outline-light" type="button" id="button-addon2">Buscar</button>
-  </div>
-  <div class="subtitulo">
-  <h1>Nuestros productos:</h1>
-  </div>
+
+  <main>
   <div class="productos">
-  <div class="contenedor">  
-  <div class="contenido">
-    <article>
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-light">Dragonite</h5>
-        <p class="card-text text-light">$1599</p>
-        <a href="#" class="btn btn-light" style="padding-bottom: 2px">Agregar al carrito</a>
-      </div>
-    </article>
-    <article>
-      <div class="card bg-dark" style="width: 18rem;">
-        <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-light">Dragonite</h5>
-          <p class="card-text text-light">$1599</p>
-          <a href="#" class="btn btn-light">Agregar al carrito</a>
+
+    <div class="row mt-5" id="contenedor" style="gap: 25px"></div>
+  </div>  
+     
+</main>
+
+<div class="container-xl">
+  <div class="modal" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito</h5>
+          <button
+            type="button"
+            class="close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </article>
-      <article>
-        <div class="card bg-dark" style="width: 18rem;">
-          <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-light">Dragonite</h5>
-            <p class="card-text text-light">$1599</p>
-            <a href="#" class="btn btn-light">Agregar al carrito</a>
-          </div>
-        </article>
-        <article>
-          <div class="card bg-dark" style="width: 18rem;">
-            <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-light">Dragonite</h5>
-              <p class="card-text text-light">$1599</p>
-              <a href="#" class="btn btn-light">Agregar al carrito</a>
-            </div>
-          </article>
-          <article>
-            <div class="card bg-dark" style="width: 18rem;">
-              <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-light">Dragonite</h5>
-                <p class="card-text text-light">$1599</p>
-                <a href="#" class="btn btn-light">Agregar al carrito</a>
-              </div>
-            </article>
-            <article>
-              <div class="card bg-dark" style="width: 18rem;">
-                <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-light">Dragonite</h5>
-                  <p class="card-text text-light">$1599</p>
-                  <a href="#" class="btn btn-light">Agregar al carrito</a>
-                </div>
-              </article>
-              <article>
-                <div class="card bg-dark" style="width: 18rem;">
-                  <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title text-light">Dragonite</h5>
-                    <p class="card-text text-light">$1599</p>
-                    <a href="#" class="btn btn-light">Agregar al carrito</a>
-                  </div>
-                </article>
-                <article>
-                  <div class="card bg-dark" style="width: 18rem;">
-                    <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-light">Dragonite</h5>
-                      <p class="card-text text-light">$1599</p>
-                      <a href="#" class="btn btn-light">Agregar al carrito</a>
-                    </div>
-                  </article>
-                  <article>
-                    <div class="card bg-dark" style="width: 18rem;">
-                      <img src="sources/img/header.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-light">Dragonite</h5>
-                        <p class="card-text text-light">$1599</p>
-                        <a href="#" class="btn btn-light">Agregar al carrito</a>
-                      </div>
-                    </article>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="vaciarCarrito">
+            Vaciar carrito
+          </button>
+          <button type="button" id="procesarCompra" class="btn btn-primary">
+            Continuar compra
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+
+          <span>Precio total:</span>
+          <p class="text-center precioTotal"></p>
+        </div>
       </div>
-    
+    </div>
   </div>
 </div>
-
-</main>
 
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -189,6 +157,8 @@
 
 
     <script src="js.js" ></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
