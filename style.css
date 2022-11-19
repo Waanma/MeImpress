@@ -81,4 +81,16 @@ body{
     font-weight: 600;
     font-style: italic;
 }
+.inicio{
+    font-family: 'Black Ops One', cursive;
+}
+#carrito table thead tr th{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+form{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 15px;
+}
 

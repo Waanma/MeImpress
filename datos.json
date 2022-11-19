@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pikachu",
+        "cantidad": 1,
+        "precio": 1599,
+        "img": "sources/img/Pikachu.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Charmander",
+        "cantidad": 1,
+        "precio": 5599,
+        "img": "sources/img/Charmander.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Mew",
+        "cantidad": 1,
+        "precio": 2399,
+        "img": "sources/img/Mew.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Charizard",
+        "cantidad": 1,
+        "precio": 4999,
+        "img": "sources/img/Charizard.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Dragonite",
+        "cantidad": 1,
+        "precio": 3299,
+        "img": "sources/img/Dragonite.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Evee",
+        "cantidad": 1,
+        "precio": 899,
+        "img": "sources/img/Evee.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Bulbasaur",
+        "cantidad": 1,        
+        "precio": 2599,
+        "img": "sources/img/Bulbasaur.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Squirtle",
+        "cantidad": 1,
+        "precio": 1099,
+        "img": "sources/img/Squirtle.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Mudkip",
+        "cantidad": 1,        
+        "precio": 4500,
+        "img": "sources/img/mudkip.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Teddiursa",
+        "cantidad": 1,        
+        "precio": 899,
+        "img": "sources/img/teddiursa.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Psyduck",
+        "cantidad": 1,        
+        "precio": 2599,
+        "img": "sources/img/psyduck.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Umbreon",
+        "cantidad": 1,        
+        "precio": 2599,
+        "img": "sources/img/umbreon.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Vulpix",
+        "cantidad": 1,        
+        "precio": 1699,
+        "img": "sources/img/vulpix.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Pikakashi",
+        "cantidad": 1,        
+        "precio": 7999,
+        "img": "sources/img/pikakashi.jpg"
+    }
+]
