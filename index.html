@@ -29,9 +29,9 @@
               data-bs-toggle="modal"
               data-bs-target="#modal"
             >
-              <i class="bi bi-cart mx-5" id="carritoContenedor">
-                <img src="/sources/img/pokedex.png"
+            <img src="/sources/img/pokedex.png"
                 style="width: 50px;" alt="">
+              <i class="bi bi-cart" id="carritoContenedor">
               </i>
             </a>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -58,10 +58,11 @@
 
   <header class="header_main">
   <div>
-    <h2>Pokemons 3d</h2> 
-    <div class="input-group mb-3 buscador">
-      <input type="text" class="form-control" placeholder="Buscador" aria-label="Buscador" aria-describedby="button-addon2">
-      <button class="btn btn-outline-light" type="button" id="button-addon2">Buscar</button>
+    <div class="titulo2">
+    <h2>Pokemons</h2>
+    </div> 
+    <div class="subtitulo2">
+      <h3>Impresiones 3d</h2>
     </div>
     <div class="subtitulo">
     <h1>Nuestros productos:</h1>
@@ -74,8 +75,46 @@
 
     <div class="row mt-5" id="contenedor" style="gap: 25px"></div>
   </div>  
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button acc-boton" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Nuestras redes
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body acordion">
+          <img src="https://cdn-icons-png.flaticon.com/512/3938/3938034.png" alt="Facebook"> <a href="www.facebook.com">Me Impress</a>
+        </div>
+        <div class="accordion-body acordion">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670127.png" alt="Facebook"> <a href="www.twitter.com">@MeImpress</a>
+        </div>
+        <div class="accordion-body acordion">
+          <img src="https://cdn-icons-png.flaticon.com/512/2504/2504918.png" alt="Facebook"> <a href="www.instagram.com">@MeImpress</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Contacto
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body" style="display: flex; justify-content:center; color: green">
+          Correo: Meimpress@gmail.com
+      </div>
+    </div>
+  </div>
      
 </main>
+
+<div class="copyright">
+  <img src="https://cdn-icons-png.flaticon.com/512/3524/3524342.png" alt="CopyRight">
+  <p>Creador: https://github.com/Waanma</p>
+</div>
+
 
 <div class="container-xl">
   <div class="modal" tabindex="-1" role="dialog" id="modal">
@@ -89,7 +128,7 @@
             data-bs-dismiss="modal"
             aria-label="Close"
           >
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">X</span>
           </button>
         </div>
         <div class="modal-body"></div>
@@ -97,7 +136,7 @@
           <button type="button" class="btn btn-danger" id="vaciarCarrito">
             Vaciar carrito
           </button>
-          <button type="button" id="procesarCompra" class="btn btn-primary">
+          <button type="button" id="procesarCompra" class="btn btn-success">
             Continuar
           </button>
           <button
@@ -108,55 +147,18 @@
             Cerrar
           </button>
 
-          <span>Precio total:</span>
-          <h3 class="text-center precioTotal"></h3>
+          <span>Precio total: $</span>
+          <p class="text-center" id="precioTotal"></p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Nuestras redes
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body acordion">
-        <strong>Facebook:</strong> <a href="www.facebook.com"> Facebook</a>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Contacto
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong></strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
 
-    <script src="datos.jsonp" ></script>
+
     <script src="js.js" ></script>
+    <script src="productos.jsonp" ></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
